@@ -43,24 +43,44 @@ const buttons = [
     value: 0,
     type: "number",
   },
+  {
+    value: "reset",
+    type: "reset",
+  },
 ];
 
 const Calculator = () => {
   const [calcText, setCalcText] = useState("");
-  const handleBtnClick = (e) => {
+  const handleNumberClick = (e) => {
     setCalcText((prev) => prev + e.target.innerText);
+  };
+  const handleResetClick = () => {
+    setCalcText("");
   };
   return (
     <div>
       <CalculatorScreen text={calcText} />
-      {buttons.map((button) => (
-        <CalculatorBtn
-          value={button.value}
-          type={button.type}
-          key={button.value}
-          onBtnClick={handleBtnClick}
-        />
-      ))}
+      {buttons.map((button) => {
+        if (button.type === "number") {
+          return (
+            <CalculatorBtn
+              value={button.value}
+              type={button.type}
+              key={button.value}
+              onBtnClick={handleNumberClick}
+            />
+          );
+        } else if (button.type === "reset") {
+          return (
+            <CalculatorBtn
+              value={button.value}
+              type={button.type}
+              key={button.value}
+              onBtnClick={handleResetClick}
+            />
+          );
+        }
+      })}
       {/* <CalculatorBtn
         value={1}
         type="number"
