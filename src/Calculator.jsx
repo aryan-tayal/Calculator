@@ -48,6 +48,10 @@ const buttons = [
     type: "reset",
   },
   { value: "del", type: "delete" },
+  { value: "/", type: "operator" },
+  { value: "*", type: "operator" },
+  { value: "+", type: "operator" },
+  { value: "-", type: "operator" },
 ];
 
 const Calculator = () => {
@@ -60,6 +64,19 @@ const Calculator = () => {
   };
   const handleDelClick = () => {
     setCalcText((prev) => prev.slice(0, -1));
+  };
+  const handleOperatorClick = (e) => {
+    const operators = buttons
+      .filter((b) => b.type === "operator")
+      .reduce((prev, current) => {
+        prev.push(current.value);
+        return prev;
+      }, []);
+    if (operators.includes(calcText.slice(-1)) || !calcText.length) {
+      console.log("NO");
+    } else {
+      setCalcText((prev) => prev + e.target.innerText);
+    }
   };
   return (
     <div>
@@ -90,6 +107,15 @@ const Calculator = () => {
               type={button.type}
               key={button.value}
               onBtnClick={handleDelClick}
+            />
+          );
+        } else if (button.type === "operator") {
+          return (
+            <CalculatorBtn
+              value={button.value}
+              type={button.type}
+              key={button.value}
+              onBtnClick={handleOperatorClick}
             />
           );
         }
