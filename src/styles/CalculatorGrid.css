@@ -1,0 +1,9 @@
+.CalculatorGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  background-color: hsl(223, 31%, 20%);
+  padding: 1.5rem;
+  border-radius: 10px;
+}

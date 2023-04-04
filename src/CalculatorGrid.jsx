@@ -1,6 +1,7 @@
 import React from "react";
 import buttons from "./buttons";
 import CalculatorBtn from "./CalculatorBtn";
+import "./styles/CalculatorGrid.css"
 const CalculatorGrid = ({ dispatch }) => {
   return (
     <div className="CalculatorGrid">
