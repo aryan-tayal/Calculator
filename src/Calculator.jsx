@@ -3,11 +3,11 @@ import CalculatorBtn from "./CalculatorBtn";
 import CalculatorScreen from "./CalculatorScreen";
 import reducer from "./reducer";
 import buttons from "./buttons";
-
+import "./styles/Calculator.css";
 const Calculator = () => {
   const [{ calcText }, dispatch] = useReducer(reducer, { calcText: "" });
   return (
-    <div>
+    <div className="Calculator">
       <CalculatorScreen text={calcText} />
       {buttons.map((button) => {
         if (button.type === "number") {
