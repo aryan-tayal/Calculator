@@ -47,6 +47,7 @@ const buttons = [
     value: "reset",
     type: "reset",
   },
+  { value: "del", type: "delete" },
 ];
 
 const Calculator = () => {
@@ -56,6 +57,9 @@ const Calculator = () => {
   };
   const handleResetClick = () => {
     setCalcText("");
+  };
+  const handleDelClick = () => {
+    setCalcText((prev) => prev.slice(0, -1));
   };
   return (
     <div>
@@ -77,6 +81,15 @@ const Calculator = () => {
               type={button.type}
               key={button.value}
               onBtnClick={handleResetClick}
+            />
+          );
+        } else if (button.type === "delete") {
+          return (
+            <CalculatorBtn
+              value={button.value}
+              type={button.type}
+              key={button.value}
+              onBtnClick={handleDelClick}
             />
           );
         }
