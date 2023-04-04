@@ -52,6 +52,7 @@ const buttons = [
   { value: "*", type: "operator" },
   { value: "+", type: "operator" },
   { value: "-", type: "operator" },
+  { value: "=", type: "equal" },
 ];
 
 const Calculator = () => {
@@ -76,6 +77,19 @@ const Calculator = () => {
       console.log("NO");
     } else {
       setCalcText((prev) => prev + e.target.innerText);
+    }
+  };
+  const handleEqualsClick = () => {
+    const operators = buttons
+      .filter((b) => b.type === "operator")
+      .reduce((prev, current) => {
+        prev.push(current.value);
+        return prev;
+      }, []);
+    if (operators.includes(calcText.slice(-1))) {
+      console.log("NO!");
+    } else {
+      setCalcText(eval(calcText));
     }
   };
   return (
@@ -116,6 +130,15 @@ const Calculator = () => {
               type={button.type}
               key={button.value}
               onBtnClick={handleOperatorClick}
+            />
+          );
+        } else if (button.type === "equal") {
+          return (
+            <CalculatorBtn
+              value={button.value}
+              type={button.type}
+              key={button.value}
+              onBtnClick={handleEqualsClick}
             />
           );
         }
