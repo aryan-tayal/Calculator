@@ -43,11 +43,11 @@ const buttons = [
     value: "reset",
     type: "reset",
   },
-  { value: "del", type: "delete" },
+  { value: "del", type: "del" },
   { value: "/", type: "operator" },
   { value: "*", type: "operator" },
   { value: "+", type: "operator" },
   { value: "-", type: "operator" },
-  { value: "=", type: "equal" },
+  { value: "=", type: "equals" },
 ];
 export default buttons;
