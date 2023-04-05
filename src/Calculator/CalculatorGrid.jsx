@@ -1,5 +1,5 @@
 import React from "react";
-import buttons from "./buttons";
+import buttons from "../helpers/buttons";
 import CalculatorBtn from "./CalculatorBtn";
 import "../styles/CalculatorGrid.css"
 const CalculatorGrid = ({ dispatch }) => {
