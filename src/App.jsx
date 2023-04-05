@@ -1,13 +1,16 @@
 import React from "react";
 import Calculator from "./Calculator";
 import Header from "./Header";
+import { ThemeProvider } from "./ThemeContext.jsx";
 import "./styles/App.css";
 
 const App = () => {
   return (
     <div className="App">
-      <Header />
-      <Calculator />
+      <ThemeProvider>
+        <Header />
+        <Calculator />
+      </ThemeProvider>
     </div>
   );
 };

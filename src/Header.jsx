@@ -1,5 +1,6 @@
 import React from "react";
 import ThemeSlider from "./ThemeSlider";
+
 const Header = () => {
   return (
     <div

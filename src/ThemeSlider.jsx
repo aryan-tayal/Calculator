@@ -1,7 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
 import "./styles/ThemeSlider.css";
 const ThemeSlider = () => {
-  const [theme, setTheme] = useState(1);
+  const { theme, setTheme } = useContext(ThemeContext);
   const transformBall = useRef(6);
   const ballRef = useRef();
   console.log(transformBall);
