@@ -1,7 +1,11 @@
 import React from "react";
-
-const CalculatorBtn = ({ value, onBtnClick }) => {
-  return <button onClick={onBtnClick}>{value}</button>;
+import "./styles/CalculatorBtn.css";
+const CalculatorBtn = ({ value, type, onBtnClick }) => {
+  return (
+    <button onClick={onBtnClick} className={`CalculatorBtn ${type}`}>
+      {value}
+    </button>
+  );
 };
 
 export default CalculatorBtn;

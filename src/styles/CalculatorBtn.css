@@ -1,0 +1,36 @@
+.CalculatorBtn {
+  --bg: hsl(30, 25%, 89%);
+  --shadow: hsl(28, 16%, 65%);
+  --text: hsl(221, 14%, 31%);
+  --hover: hsl(30, 25%, 95%);
+  color: var(--text);
+  background-color: var(--bg);
+  box-shadow: 0 3px 0 var(--shadow);
+  border: none;
+  padding: 9px 0;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+}
+.CalculatorBtn:hover {
+  background-color: var(--hover);
+}
+.CalculatorBtn.reset,
+.CalculatorBtn.del {
+  --text: hsl(0, 0%, 100%);
+  --bg: hsl(225, 21%, 49%);
+  --shadow: hsl(224, 28%, 35%);
+  --hover: hsl(225, 21%, 55%);
+}
+.CalculatorBtn.CalculatorBtn.equals {
+  --text: hsl(0, 0%, 100%);
+  --bg: hsl(6, 63%, 50%);
+  --shadow: hsl(6, 70%, 34%);
+  --hover: hsl(6, 63%, 55%);
+}
+.CalculatorBtn.reset,
+.CalculatorBtn.equals {
+  grid-column: span 2;
+}
