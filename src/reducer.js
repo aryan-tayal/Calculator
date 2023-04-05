@@ -3,7 +3,6 @@ import buttons from "./buttons";
 const reducer = (state, action) => {
   switch (action.type) {
     case "NUMBER":
-      console.log("hi");
       return { calcText: state.calcText + action.value };
     case "RESET":
       return { calcText: "" };
@@ -34,7 +33,7 @@ const reducer = (state, action) => {
       if (operators.includes(state.calcText.slice(-1))) {
         console.log("NO!");
       } else {
-        return { calcText: eval(state.calcText) };
+        return { calcText: eval(state.calcText).toString() };
       }
     }
     default: {
