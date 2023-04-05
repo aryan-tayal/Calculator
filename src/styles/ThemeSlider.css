@@ -3,7 +3,7 @@
   align-items: center;
 }
 .ThemeSlider-title {
-  margin-right:10px;
+  margin-right: 10px;
 }
 .roll-area {
   --main-color: #191f31;
@@ -20,7 +20,7 @@
   justify-content: space-between;
 }
 .roll-input {
-  width: 30%;
+  width: 25.5%;
   position: relative;
 }
 .roll-input:nth-of-type(2) {
@@ -46,7 +46,7 @@
 }
 .roll-input > input {
   height: 100%;
-  width: 30px;
+  width: 100%;
   opacity: 0;
   display: block;
   cursor: pointer;
