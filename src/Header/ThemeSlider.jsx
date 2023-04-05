@@ -1,7 +1,7 @@
 import React, { useRef, useContext } from "react";
-import { ThemeContext } from "./ThemeContext";
+import { ThemeContext } from "../ThemeContext";
 
-import "./styles/ThemeSlider.css";
+import "../styles/ThemeSlider.css";
 
 const ThemeSlider = () => {
   const { theme, setTheme } = useContext(ThemeContext);

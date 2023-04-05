@@ -1,6 +1,6 @@
 import React from "react";
 import Calculator from "./Calculator";
-import Header from "./Header";
+import Header from "./Header/Header";
 import { ThemeProvider } from "./ThemeContext.jsx";
 import "./styles/App.css";
 
