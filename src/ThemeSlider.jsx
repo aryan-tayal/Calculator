@@ -1,29 +1,21 @@
-import React, { useState, useRef, useContext } from "react";
+import React, { useRef, useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
+
 import "./styles/ThemeSlider.css";
+
 const ThemeSlider = () => {
   const { theme, setTheme } = useContext(ThemeContext);
+
   const transformBall = useRef(6);
   const ballRef = useRef();
-  console.log(transformBall);
+
   const handleThemeInputChange = (e) => {
     setTheme(parseInt(e.target.value));
     transformBall.current +=
       e.target.getBoundingClientRect().left -
       ballRef.current.getBoundingClientRect().left;
-    // console.log(
-    //   ballRef.current.getBoundingClientRect().left
-    //   //   transformBall.current +
-    //   //     e.target.getBoundingClientRect().left -
-    //   //     ballRef.current.getBoundingClientRect().left
-    // );
-    // ball.style.setProperty(
-    //   "--i",
-    //   parseInt(getComputedStyle(ball).getPropertyValue("--i")) +
-    //     e.target.getBoundingClientRect().left -
-    //     ball.getBoundingClientRect().left
-    // );
   };
+
   return (
     <div className="ThemeSlider">
       <h3 className="ThemeSlider-title">Theme</h3>
