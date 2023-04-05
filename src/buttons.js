@@ -40,6 +40,10 @@ const buttons = [
   },
   { value: "-", type: "operator" },
   {
+    value: ".",
+    type: "operator",
+  },
+  {
     value: 0,
     type: "number",
   },
