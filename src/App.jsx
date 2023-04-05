@@ -1,7 +1,7 @@
 import React from "react";
 import Calculator from "./Calculator/Calculator";
 import Header from "./Header/Header";
-import { ThemeProvider } from "./ThemeContext.jsx";
+import { ThemeProvider } from "./context/theme.context.jsx";
 import "./styles/App.css";
 
 const App = () => {

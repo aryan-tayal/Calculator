@@ -1,4 +1,4 @@
-import buttons from "./helpers/buttons";
+import buttons from "../helpers/buttons";
 
 const reducer = (state, action) => {
   switch (action.type) {

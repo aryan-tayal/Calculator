@@ -1,5 +1,5 @@
 import React, { useRef, useContext } from "react";
-import { ThemeContext } from "../ThemeContext";
+import { ThemeContext } from "../context/theme.context";
 
 import "../styles/ThemeSlider.css";
 
