@@ -13,3 +13,6 @@
   flex-direction: column;
   background-color: hsl(222, 26%, 31%);
 }
+.App > * {
+  width: 400px;
+}
