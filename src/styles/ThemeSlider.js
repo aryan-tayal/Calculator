@@ -27,6 +27,12 @@ const useStyles = createUseStyles(
     rollinput: {
       width: "25.5%",
       position: "relative",
+      "&:nth-of-type(2)": {
+        textAlign: "center",
+      },
+      "&:nth-of-type(3)": {
+        textAlign: "right",
+      },
       "& label": {
         width: "100%",
         margin: {
