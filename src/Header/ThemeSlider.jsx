@@ -1,7 +1,6 @@
 import React, { useRef, useContext } from "react";
 import { ThemeContext } from "../context/theme.context";
-
-import "../styles/ThemeSlider.css";
+import useStyles from "../styles/ThemeSlider";
 
 const ThemeSlider = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -16,12 +15,14 @@ const ThemeSlider = () => {
       ballRef.current.getBoundingClientRect().left;
   };
 
+  const classes = useStyles();
+
   return (
-    <div className="ThemeSlider">
-      <h3 className="ThemeSlider-title">Theme</h3>
-      <div className="roll-area">
+    <div className={classes.root}>
+      <h3 className={classes.title}>Theme</h3>
+      <div className={classes.rollarea}>
         {[1, 2, 3].map((input) => (
-          <div className="roll-input" key={`theme${input}`}>
+          <div className={classes.rollinput} key={`theme${input}`}>
             <label htmlFor={`theme${input}`}>{input}</label>
             <input
               type="radio"
@@ -34,7 +35,7 @@ const ThemeSlider = () => {
           </div>
         ))}
         <div
-          className="roll-ball"
+          className={classes.rollball}
           style={{ "--i": transformBall.current }}
           ref={ballRef}
         ></div>
