@@ -1,7 +1,6 @@
 import React from "react";
 import useStyles from "../styles/CalculatorBtn";
 
-import "../styles/CalculatorBtn.css";
 const CalculatorBtn = ({ value, type, onBtnClick }) => {
   const classes = useStyles();
   return (

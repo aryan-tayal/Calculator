@@ -1,7 +1,8 @@
 import React from "react";
-import "../styles/CalculatorScreen.css";
+import useStyles from "../styles/CalculatorScreen";
 const CalculatorScreen = ({ text }) => {
-  return <div className="CalculatorScreen">{text}</div>;
+  const classes = useStyles();
+  return <div className={classes.root}>{text}</div>;
 };
 
 export default CalculatorScreen;
