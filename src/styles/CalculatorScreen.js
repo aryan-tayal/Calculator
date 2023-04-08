@@ -2,7 +2,7 @@ import { createUseStyles } from "react-jss";
 const useStyles = createUseStyles(
   {
     root: {
-      color: "hsl(0, 0%, 100%)",
+      color: ({ styles }) => styles.colorPrimary,
       backgroundColor: "hsl(224, 36%, 15%)",
       borderRadius: 10,
       height: 100,
