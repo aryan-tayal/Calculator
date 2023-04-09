@@ -20,6 +20,13 @@ const useStyles = createUseStyles(
         width: 400,
       },
     },
+    "@media (max-width: 450px)": {
+      root: {
+        "&>*": {
+          width: "calc(100vw - 40px)",
+        },
+      },
+    },
   },
   { name: "App" }
 );
