@@ -1,8 +1,9 @@
 import React from "react";
 import useStyles from "../styles/CalculatorBtn";
-
+import { useTheme } from "react-jss";
 const CalculatorBtn = ({ value, type, onBtnClick }) => {
-  const classes = useStyles();
+  const { styles } = useTheme();
+  const classes = useStyles({ styles });
   return (
     <button
       onClick={onBtnClick}
