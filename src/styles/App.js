@@ -1,8 +1,6 @@
 import { createUseStyles } from "react-jss";
 const useStyles = createUseStyles(
   {
-    "@import":
-      "url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap')",
     "@global": {
       "*": {
         margin: 0,
