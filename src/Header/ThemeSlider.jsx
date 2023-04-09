@@ -4,7 +4,7 @@ import useStyles from "../styles/ThemeSlider";
 
 const ThemeSlider = () => {
   const { theme, styles, setTheme } = useTheme();
-  const transformBall = useRef(6);
+  const transformBall = useRef(theme === 1 ? 5 : theme === 2 ? 38.5 : 72);
   const ballRef = useRef();
 
   const handleThemeInputChange = (e) => {
