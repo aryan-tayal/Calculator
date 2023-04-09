@@ -53,7 +53,7 @@ const useStyles = createUseStyles(
       pointerEvents: "none",
       width: 20,
       height: 20,
-      backgroundColor: ({ styles }) => styles.text.toggle,
+      backgroundColor: ({ styles }) => styles.toggle,
       borderRadius: "50rem",
       position: "absolute",
       left: "calc(var(--i) * 1px)",

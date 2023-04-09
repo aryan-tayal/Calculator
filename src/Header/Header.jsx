@@ -10,7 +10,7 @@ const Header = () => {
       style={{
         display: "flex",
         justifyContent: "space-between",
-        color: styles.text.primary,
+        color: styles.text,
       }}
     >
       <h1 className="Header-title">calc</h1> <ThemeSlider />
