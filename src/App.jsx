@@ -22,17 +22,14 @@ const themeStyles = [
         shadow: "hsl(35, 11%, 61%)",
         color: "hsl(221, 14%, 31%)",
       },
-      new: {
-        color: "hsl(30, 14%, 31%)",
-      },
       special: {
         color: "hsl(0, 0%, 100%)",
         background: "hsl(225, 21%, 49%)",
         shadow: "hsl(224, 28%, 35%)",
       },
       equals: {
-        background: "hsl(25, 98%, 40%)",
-        shadow: "hsl(25, 99%, 27%)",
+        background: "hsl(6, 63%, 50%)",
+        shadow: "hsl(6, 70%, 34%)",
         color: "hsl(0, 0%, 100%)",
       },
     },

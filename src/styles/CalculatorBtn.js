@@ -1,4 +1,10 @@
 import { createUseStyles } from "react-jss";
+
+const lighten = (hsl) => {
+  let l = parseInt(hsl.split("(")[1].split(",")[2].split("%")[0]);
+  return `${hsl.split(l)[0]}${l + 10}%)`;
+};
+
 const useStyles = createUseStyles(
   ({ styles: { key } }) => ({
     root: {
@@ -16,23 +22,32 @@ const useStyles = createUseStyles(
       borderRadius: "0.25rem",
       transition: "background-color 0.2s",
       "&:hover": {
-        // backgroundColor: "var(--hover)",
+        backgroundColor: lighten(key.normal.background),
       },
     },
     reset: {
       color: key.special.color,
       backgroundColor: key.special.background,
       boxShadow: `0 3px 0 ${key.special.shadow}`,
+      "&:hover": {
+        backgroundColor: lighten(key.special.background),
+      },
       gridColumn: "span 2",
     },
     del: {
       color: key.special.color,
       backgroundColor: key.special.background,
       boxShadow: `0 3px 0 ${key.special.shadow}`,
+      "&:hover": {
+        backgroundColor: lighten(key.special.background),
+      },
     },
     equals: {
       backgroundColor: key.equals.background,
       boxShadow: `0 3px 0 ${key.equals.shadow}`,
+      "&:hover": {
+        backgroundColor: lighten(key.equals.background),
+      },
       color: key.equals.color,
       gridColumn: "span 2",
     },
