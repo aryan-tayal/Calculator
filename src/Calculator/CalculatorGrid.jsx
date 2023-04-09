@@ -2,8 +2,10 @@ import React from "react";
 import buttons from "../helpers/buttons";
 import CalculatorBtn from "./CalculatorBtn";
 import useStyles from "../styles/CalculatorGrid";
+import { useTheme } from "react-jss";
 const CalculatorGrid = ({ dispatch }) => {
-  const classes = useStyles();
+  const { styles } = useTheme();
+  const classes = useStyles({ styles });
   return (
     <div className={classes.root}>
       {buttons.map((button) => (

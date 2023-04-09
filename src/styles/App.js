@@ -17,7 +17,7 @@ const useStyles = createUseStyles(
       justifyContent: "center",
       alignItems: "center",
       flexDirection: "column",
-      backgroundColor: "hsl(222, 26%, 31%)",
+      backgroundColor: ({ styles }) => styles.backgrounds.app,
       "&>*": {
         width: 400,
       },

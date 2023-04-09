@@ -16,7 +16,7 @@ const ThemeSlider = () => {
       ballRef.current.getBoundingClientRect().left;
   };
 
-  const classes = useStyles();
+  const classes = useStyles({ styles });
 
   return (
     <div className={classes.root}>

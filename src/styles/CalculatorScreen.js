@@ -2,8 +2,8 @@ import { createUseStyles } from "react-jss";
 const useStyles = createUseStyles(
   {
     root: {
-      color: ({ styles }) => styles.colorPrimary,
-      backgroundColor: "hsl(224, 36%, 15%)",
+      color: ({ styles }) => styles.text.primary,
+      backgroundColor: ({ styles }) => styles.backgrounds.screen,
       borderRadius: 10,
       height: 100,
       display: "flex",

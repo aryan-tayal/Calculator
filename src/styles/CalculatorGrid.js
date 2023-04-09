@@ -6,7 +6,7 @@ const useStyles = createUseStyles(
       display: "grid",
       gridTemplateColumns: "repeat(4, 1fr)",
       gap: "1rem",
-      backgroundColor: " hsl(223, 31%, 20%)",
+      backgroundColor: ({ styles }) => styles.backgrounds.calculator,
       padding: "1.5rem",
       borderRadius: 10,
     },
