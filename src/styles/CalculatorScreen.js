@@ -11,6 +11,7 @@ const useStyles = createUseStyles(
       alignItems: "center",
       padding: 10,
       fontSize: "3rem",
+      overflow: "hidden",
       margin: {
         top: 30,
         bottom: 30,
