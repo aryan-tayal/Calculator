@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Calculator from "./Calculator/Calculator";
 import Header from "./Header/Header";
-// import { ThemeProvider } from "./context/theme.context.jsx";
 import useStyles from "./styles/App";
 import { ThemeProvider } from "react-jss";
 
