@@ -1,5 +1,5 @@
 import buttons from "../helpers/buttons";
-
+import calculate from "../helpers/calcLogic";
 const reducer = (state, action) => {
   switch (action.type) {
     case "NUMBER":
@@ -33,7 +33,7 @@ const reducer = (state, action) => {
       if (operators.includes(state.calcText.slice(-1))) {
         console.log("NO!");
       } else {
-        return { calcText: eval(state.calcText).toString() };
+        return { calcText: calculate(state.calcText) };
       }
     }
     default: {
