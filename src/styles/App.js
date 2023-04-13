@@ -17,7 +17,7 @@ const useStyles = createUseStyles(
       flexDirection: "column",
       backgroundColor: ({ styles }) => styles.backgrounds.app,
       "&>*": {
-        width: 400,
+        width: 500,
       },
     },
     "@media (max-width: 450px)": {
