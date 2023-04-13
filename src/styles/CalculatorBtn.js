@@ -13,8 +13,8 @@ const useStyles = createUseStyles(
       boxShadow: `0 3px 0 ${key.normal.shadow}`,
       border: "none",
       padding: {
-        top: 9,
-        bottom: 9,
+        top: 12,
+        bottom: 12,
       },
       fontSize: "1.3rem",
       textTransform: "uppercase",
