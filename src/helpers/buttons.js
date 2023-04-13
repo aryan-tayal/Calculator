@@ -41,7 +41,7 @@ const buttons = [
   { value: "-", type: "operator" },
   {
     value: ".",
-    type: "operator",
+    type: "decimal",
   },
   {
     value: 0,

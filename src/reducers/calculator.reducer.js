@@ -4,6 +4,13 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "NUMBER":
       return { calcText: state.calcText + action.value };
+    case "DECIMAL":
+      if (!state.calcText.includes(".")) {
+        return { calcText: state.calcText + action.value };
+      } else {
+        console.log("NO");
+        return { calcText: state.calcText };
+      }
     case "RESET":
       return { calcText: "" };
     case "DEL":
