@@ -1,27 +1,31 @@
 import buttons from "../helpers/buttons";
 import calculate from "../helpers/calcLogic";
+
+const operators = buttons
+  .filter((b) => b.type === "operator")
+  .reduce((prev, current) => {
+    prev.push(current.value);
+    return prev;
+  }, []);
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "NUMBER":
       return { calcText: state.calcText + action.value };
     case "DECIMAL":
-      if (!state.calcText.includes(".")) {
-        return { calcText: state.calcText + action.value };
-      } else {
+      const pattern = /\+|\-|\*|\//;
+      console.log(state.calcText.split(pattern));
+      if (state.calcText.split(pattern).slice(-1).toString().includes(".")) {
         console.log("NO");
         return { calcText: state.calcText };
+      } else {
+        return { calcText: state.calcText + action.value };
       }
     case "RESET":
       return { calcText: "" };
     case "DEL":
       return { calcText: state.calcText.slice(0, -1) };
     case "OPERATOR":
-      const operators = buttons
-        .filter((b) => b.type === "operator")
-        .reduce((prev, current) => {
-          prev.push(current.value);
-          return prev;
-        }, []);
       if (
         operators.includes(state.calcText.slice(-1)) ||
         !state.calcText.length
@@ -31,13 +35,10 @@ const reducer = (state, action) => {
         return { calcText: state.calcText + action.value };
       }
     case "EQUALS": {
-      const operators = buttons
-        .filter((b) => b.type === "operator")
-        .reduce((prev, current) => {
-          prev.push(current.value);
-          return prev;
-        }, []);
-      if (operators.includes(state.calcText.slice(-1))) {
+      if (
+        operators.includes(state.calcText.slice(-1)) ||
+        state.calcText.slice(-1) === "."
+      ) {
         console.log("NO!");
       } else {
         return { calcText: calculate(state.calcText) };
