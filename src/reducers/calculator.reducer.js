@@ -15,7 +15,7 @@ const reducer = (state, action) => {
     case "DECIMAL":
       const pattern = /\+|\-|\*|\//;
       console.log(state.calcText.split(pattern));
-      if (state.calcText.split(pattern).slice(-1).toString().includes(".")) {
+      if (state.calcText.split(operators).slice(-1).toString().includes(".")) {
         console.log("NO");
         return { calcText: state.calcText };
       } else {
