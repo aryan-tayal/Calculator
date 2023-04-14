@@ -31,9 +31,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./design/solution-theme-1.jpg)
-![](./design/solution-theme-2.jpg)
-![](./design/solution-theme-3.jpg)
+![Theme 1 Desktop Design](./design/solution-theme-1.png)
+![Theme 2 Desktop Design](./design/solution-theme-2.png)
+![Theme 3 Desktop Design](./design/solution-theme-3.png)
 
 ### Links
 
